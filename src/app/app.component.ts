@@ -19,8 +19,8 @@ export class AppComponent {
 
   addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
     console.log(`Adding article title: ${title.value} and link: ${link.value}`);
-    this.articles.push(new Article(title.value, link.value, 0));
-    title.value = '';
+    this.articles.push(new Article(title.value, link.value, 0)); // 把这个article加入articles数组中
+    title.value = ''; // 清除input字段
     link.value = '';
     return false;
   }
